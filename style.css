@@ -1,0 +1,27 @@
+html {
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#grid {
+    display: grid;
+    grid: 1fr, 1fr;
+    justify-content: center;
+    justify-items: center;
+}
+
+#my-canvas {
+    border: 1px dotted white;
+    margin: auto;
+    cursor: crosshair;
+}
+
+#clicked-coordinate-label{
+    bottom: 20px;
+}
+
+#copy-btn {
+    width: 200px;
+}
