@@ -44,7 +44,7 @@ ctx.strokeRect(canvasWidth * 0.1, canvasHeight * 0.1, canvasWidth * 0.8,  canvas
 
 // Draw Square Gradient Background
 
-let backgroundGradient = ctx.createLinearGradient(0, canvasHeight * 0.1, 0,  canvasHeight * 0.8); // Left Wing, gradient mirrored
+let backgroundGradient = ctx.createLinearGradient(0, canvasHeight * 0.1, 0,  canvasHeight * 0.9); // Left Wing, gradient mirrored
 backgroundGradient.addColorStop(0,"#B7A99F");
 backgroundGradient.addColorStop(23.8462/100,"#D6D5C3");
 backgroundGradient.addColorStop(39.0526/100,"#D7D6C5");
