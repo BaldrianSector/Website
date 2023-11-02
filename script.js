@@ -44,15 +44,15 @@ ctx.strokeRect(canvasWidth * 0.1, canvasHeight * 0.1, canvasWidth * 0.8,  canvas
 
 // Draw Square Gradient Background
 
-let backgroundGradient = ctx.createLinearGradient(0, canvasHeight * 0.1, 0,  canvasHeight * 0.9); // Left Wing, gradient mirrored
-backgroundGradient.addColorStop(0,"#B7A99F");
-backgroundGradient.addColorStop(23.8462/100,"#D6D5C3");
-backgroundGradient.addColorStop(39.0526/100,"#D7D6C5");
-backgroundGradient.addColorStop(52.8756/100,"#DFD6C0");
-backgroundGradient.addColorStop(63.1887/100,"#DAD2BD");
-backgroundGradient.addColorStop(86.1673/100,"#B9A593");
-backgroundGradient.addColorStop(91.3084/100,"#BFBBA9");
-backgroundGradient.addColorStop(1,"#B8AA9F");
+let backgroundGradient = ctx.createLinearGradient(0, canvasHeight * 0, 0,  canvasHeight * 0.9); // Left Wing, gradient mirrored
+backgroundGradient.addColorStop(0,"#DBD6D1");
+backgroundGradient.addColorStop(23.8462/100,"#E7E6DE");
+backgroundGradient.addColorStop(39.0526/100,"#EBEAE2");
+backgroundGradient.addColorStop(52.8756/100,"#EDEAE0");
+backgroundGradient.addColorStop(63.1887/100,"#E8E4DA");
+backgroundGradient.addColorStop(86.1673/100,"#E2DCD3");
+backgroundGradient.addColorStop(91.3084/100,"#DAD3CB");
+backgroundGradient.addColorStop(1,"#DBD5D0");
 
 ctx.lineWidth = 6;
 ctx.fillStyle = backgroundGradient
@@ -73,6 +73,10 @@ ctx.fillStyle = "rgb(0, 0, 0)";
 const centerX = canvas.width;
 const centerY = 0;
 
+// Add blur filter
+
+ctx.filter = "blur(1px)";
+
 // Specify the text and its position within the canvas
 ctx.fillText("SPREAD YOUR WINGS OUT WIDE IN VIBRANT HUE", canvasWidth/2, canvasHeight*0.07); // Adjust the coordinates as needed
 
@@ -84,7 +88,6 @@ ctx.rotate(Math.PI / 2); // 90 degrees in radians
 
 // Specify the text and its position within the canvas
 ctx.fillText("FOR DREAMS AWAIT MY DEAR YOU MUST PURSUE", canvasWidth/2, canvasHeight*0.07); // Adjust the coordinates as needed
-
 
 // Translate to the center of the canvas
 ctx.translate(centerX, centerY);
@@ -108,6 +111,10 @@ ctx.setTransform(1, 0, 0, 1, 0, 0); // Reset transformation
 ctx.wordSpacing = "0px";
 ctx.font = "98px Bodoni";
 
+// Remove filter blur
+
+ctx.filter = "blur(0px)";
+
 // Title: Life is short
 
 ctx.fillText("LIFE IS SHORT", canvasWidth/2, canvasHeight*0.27)
@@ -118,6 +125,13 @@ ctx.font = "46px Bodoni";
 ctx.fillText("BE A BUTTERFLY", canvasWidth/2, canvasHeight*0.84)
 
 // Draw Butterfly
+
+// Add shadow
+
+ctx.shadowOffsetX = 0
+ctx.shadowOffsetY = 0
+ctx.shadowColor = "black";
+ctx.shadowBlur = 10;
 
 // Right horn line
 
