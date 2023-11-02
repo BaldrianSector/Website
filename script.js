@@ -73,9 +73,6 @@ ctx.fillStyle = "rgb(0, 0, 0)";
 const centerX = canvas.width;
 const centerY = 0;
 
-// Add blur filter
-
-ctx.filter = "blur(1px)";
 
 // Specify the text and its position within the canvas
 ctx.fillText("SPREAD YOUR WINGS OUT WIDE IN VIBRANT HUE", canvasWidth/2, canvasHeight*0.07); // Adjust the coordinates as needed
@@ -110,10 +107,6 @@ ctx.setTransform(1, 0, 0, 1, 0, 0); // Reset transformation
 
 ctx.wordSpacing = "0px";
 ctx.font = "98px Bodoni";
-
-// Remove filter blur
-
-ctx.filter = "blur(0px)";
 
 // Title: Life is short
 
